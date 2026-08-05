@@ -86,6 +86,6 @@ set "status-right" "#[fg=$onedark_white,bg=$onedark_black,nounderscore,noitalics
 
 set "status-left" "#[fg=$onedark_black,bg=$onedark_green,bold] #S #[fg=$onedark_black,bg=$onedark_green,bold,italics]#{prefix_highlight}#[fg=$onedark_green,bg=$onedark_black,nobold,nounderscore,noitalics]"
 
-set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #W #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #W ○ #[fg=$onedark_green,bg=$onedark_black]#{pane_current_command} #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
 
-set "window-status-current-format" "#[fg=$onedark_black,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_white2,bg=$onedark_visual_grey,bold] #I  #{?window_zoomed_flag,#[fg=$onedark_yellow] ,}#W#{?window_zoomed_flag,#[fg=$onedark_yellow] , }#[fg=$onedark_visual_grey,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "window-status-current-format" "#[fg=$onedark_black,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_white2,bg=$onedark_visual_grey,bold] #I  #{?window_zoomed_flag,#[fg=$onedark_yellow] ,}#W#{?window_zoomed_flag,#[fg=$onedark_yellow] , }● #[fg=$onedark_green,bg=$onedark_visual_grey]#{pane_current_command} #[fg=$onedark_visual_grey,bg=$onedark_black,nobold,nounderscore,noitalics]"
