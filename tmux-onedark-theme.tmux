@@ -1,6 +1,6 @@
 #!/bin/bash
 onedark_black="#282c34"
-onedark_blue="#61afef"
+onedark_blue="#0f80d5"
 onedark_yellow="#e5c07b"
 onedark_red="#e06c75"
 onedark_white="#aab2bf"
@@ -41,13 +41,13 @@ set "status-right-length" "100"
 set "status-right-attr" "none"
 
 set "message-fg" "$onedark_white"
-set "message-bg" "$onedark_black"
+set "message-bg" "$onedark_blue"
 
 set "message-command-fg" "$onedark_white"
 set "message-command-bg" "$onedark_black"
 
 set "message-style" "fg=$onedark_black,bg=$onedark_green"
-set "message-command-style" "fg=$onedark_black,bg=$onedark_green,bold"
+set "message-command-style" "fg=$onedark_black,bg=$onedark_blue,bold"
 
 set "status-attr" "none"
 set "status-left-attr" "none"
