@@ -38,40 +38,47 @@ set "status-justify" "left"
 
 set "status-left-length" "100"
 set "status-right-length" "100"
-set "status-right-attr" "none"
-
-set "message-fg" "$onedark_white"
-set "message-bg" "$onedark_blue"
-
-set "message-command-fg" "$onedark_white"
-set "message-command-bg" "$onedark_black"
+# All styles below use the modern *-style options (tmux 3.2+). The old
+# -fg/-bg/-attr options were removed from tmux and did nothing; values come
+# from this palette or from the kitty-harmonized colors that previously lived
+# in tmux.conf — consolidated here so the theme is the single visual source.
 
 set "message-style" "fg=$onedark_black,bg=$onedark_green"
 set "message-command-style" "fg=$onedark_black,bg=$onedark_blue,bold"
 
-set "status-attr" "none"
-set "status-left-attr" "none"
-
-setw "window-status-fg" "$onedark_black"
-setw "window-status-bg" "$onedark_black"
-setw "window-status-attr" "none"
-
-setw "window-status-activity-bg" "$onedark_black"
-setw "window-status-activity-fg" "$onedark_black"
-setw "window-status-activity-attr" "none"
-
 setw "window-status-separator" ""
 
-set "window-style" "fg=$onedark_comment_grey"
-set "window-active-style" "fg=$onedark_white"
+# activity (agent/build output while away): theme blue, bold.
+# bell: theme red — both flag-only in the status line.
+setw "window-status-activity-style" "fg=$onedark_blue,bold"
+setw "window-status-bell-style" "fg=$onedark_red,bold"
 
-set "pane-border-fg" "$onedark_white"
-set "pane-border-bg" "$onedark_black"
-set "pane-active-border-fg" "$onedark_green"
-set "pane-active-border-bg" "$onedark_black"
+# pane content dimming
+set "window-style" "fg=#d6d6d6,bg=#202020"
+set "window-active-style" "fg=#FFFFFF,bg=#000000"
 
-set "display-panes-active-colour" "$onedark_yellow"
-set "display-panes-colour" "$onedark_blue"
+setw "mode-style" "bg=#003f72"
+
+set "pane-border-style" "fg=#505050,bg=#202020"
+set "pane-active-border-style" "fg=#808080,bg=#202020"
+setw "pane-border-lines" "heavy"
+set "pane-border-indicators" "colour"
+set "pane-scrollbars-style" "bg=#202020,fg=#323F4E"
+
+set "display-panes-style" "fg=$onedark_blue,bg=$onedark_black"
+
+# popups / menus (tmux-fzf, display-popup, display-menu)
+set "popup-style" "bg=#1c1e23"
+set "popup-border-style" "fg=#63f2f1,bg=#100E23"
+set "popup-border-lines" "rounded"
+set "menu-style" "bg=#1c1e23"
+set "menu-selected-style" "bg=#003f72,fg=#FFFFFF,bold"
+set "menu-border-style" "fg=#63f2f1,bg=#100E23"
+set "menu-border-lines" "rounded"
+
+# cursor
+set "cursor-style" "blinking-bar"
+set "cursor-colour" "$onedark_white2"
 
 set "status-bg" "$onedark_black"
 set "status-fg" "$onedark_white"
