@@ -52,6 +52,7 @@ setw "window-status-separator" ""
 # bell: theme red — both flag-only in the status line.
 setw "window-status-activity-style" "bg=$onedark_comment_grey,bold,italics"
 setw "window-status-bell-style" "fg=$onedark_red,bold"
+setw "window-status-style" "fg=$onedark_white,bg=$onedark_black"
 
 # pane content dimming
 set "window-style" "fg=#d6d6d6,bg=#202020"
@@ -96,6 +97,6 @@ set "status-right" "#[fg=$onedark_white,bg=$onedark_black,nounderscore,noitalics
 
 set "status-left" "#[fg=$onedark_black,bg=$onedark_green,bold] #S #[fg=$onedark_black,bg=$onedark_green,bold,italics]#{prefix_highlight}#[fg=$onedark_green,bg=$onedark_black,nobold,nounderscore,noitalics]"
 
-set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #W #{?window_bell_flag,#[fg=$onedark_red]○ ,#{?window_activity_flag,#[fg=$onedark_blue]○ ,○ }}#[fg=$onedark_green,bg=$onedark_black]#{pane_current_command} #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #{?window_activity_flag,#[fg=$onedark_white bg=$onedark_black bold italics]#W ,#[fg=$onedark_white bg=$onedark_black]#W }#{?window_bell_flag,#[fg=$onedark_red]● ,#{?window_activity_flag,#[fg=$onedark_blue]● ,○ }}#[fg=$onedark_green,bg=$onedark_black]#{pane_current_command} #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
 
 set "window-status-current-format" "#[fg=$onedark_black,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_white2,bg=$onedark_visual_grey,bold] #I  #{?window_zoomed_flag,#[fg=$onedark_yellow] ,}#W#{?window_zoomed_flag,#[fg=$onedark_yellow] , }#{?window_bell_flag,#[fg=$onedark_red]● ,#{?window_activity_flag,#[fg=$onedark_blue]● ,● }}#[fg=$onedark_green,bg=$onedark_visual_grey]#{pane_current_command} #[fg=$onedark_visual_grey,bg=$onedark_black,nobold,nounderscore,noitalics]"
