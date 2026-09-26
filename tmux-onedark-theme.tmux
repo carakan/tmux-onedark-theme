@@ -50,7 +50,7 @@ setw "window-status-separator" ""
 
 # activity (agent/build output while away): theme blue, bold.
 # bell: theme red — both flag-only in the status line.
-setw "window-status-activity-style" "bg=$onedark_comment_grey,bold,italics"
+setw "window-status-activity-style" "fg=$onedark_comment_grey,bold,italics"
 setw "window-status-bell-style" "fg=$onedark_red,bold"
 setw "window-status-style" "fg=$onedark_white,bg=$onedark_black"
 
